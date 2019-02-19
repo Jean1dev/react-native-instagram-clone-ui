@@ -1,29 +1,13 @@
 import React, { Component } from 'react'
-import { 
-   Text,
-   View,
-   StyleSheet,
-   } from 'react-native'
+import Header from './components/header/index'
+import Post from './components/post/index'
 
 export default class App extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text> textInComponent </Text>
-      </View>
+      <Header></Header>
     )
   }
 
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  f20: {
-    fontSize: 20
-  }
-})
