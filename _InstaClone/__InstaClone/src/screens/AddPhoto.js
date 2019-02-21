@@ -13,7 +13,7 @@ import {
 } from 'react-native'
 import ImagePicker from 'react-native-image-picker'
 
-class AddPhoto extends Component {
+export default class AddPhoto extends Component {
     state = {
         image: null,
         comment: '',
@@ -97,4 +97,3 @@ const styles = StyleSheet.create({
     }
 })
 
-export default AddPhoto

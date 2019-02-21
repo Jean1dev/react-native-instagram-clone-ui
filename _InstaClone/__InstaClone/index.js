@@ -4,8 +4,17 @@
  */
 
 import {AppRegistry} from 'react-native';
-import App from './App';
-//import App from './src/screens/Feed'
+import MenuNavigator from './src/navigator/Navigator'
 import {name as appName} from './app.json';
+import React from 'react'
+import { Provider } from 'react-redux'
+import config from './src/store/storeConfig'
 
-AppRegistry.registerComponent(appName, () => App);
+const store = config()
+const Redux = () => {
+    return <Provider store={store}>
+        <MenuNavigator></MenuNavigator>
+    </Provider>
+}
+
+AppRegistry.registerComponent(appName, () => Redux);
